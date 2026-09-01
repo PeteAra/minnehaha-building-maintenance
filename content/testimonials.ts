@@ -26,7 +26,7 @@ export const testimonials: Testimonial[] = [
   {
     id: "3",
     quote:
-      "MBM handles our ground-level window cleaning on a bi-weekly contract. Consistent quality, no surprises on billing, and they understand what retail properties need to stay presentable.",
+      "MBM handles our ground-level window cleaning on a bi-weekly contract. Consistent quality, billing that just runs in the background, and invoices that are easy for our AP team to process.",
     name: "Facilities Manager",
     role: "Shopping Center, Minneapolis Metro",
     rating: 5,

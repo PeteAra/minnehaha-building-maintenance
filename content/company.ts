@@ -1,7 +1,7 @@
 import {
   BadgeCheck,
   Clock,
-  DollarSign,
+  CreditCard,
   Shield,
   Sparkles,
   Users,
@@ -27,7 +27,7 @@ export const whyChooseUs: Benefit[] = [
     id: "chains",
     title: "Built for Multi-Location Accounts",
     description:
-      "We understand what facilities teams and franchise operators need — consistent quality, reliable scheduling, and straightforward billing across every site.",
+      "We understand what facilities teams and franchise operators need — consistent quality, reliable scheduling, and consolidated invoicing that keeps paperwork simple across every site.",
     icon: Users,
   },
   {
@@ -38,11 +38,11 @@ export const whyChooseUs: Benefit[] = [
     icon: Shield,
   },
   {
-    id: "value",
-    title: "Contract Savings",
+    id: "billing",
+    title: "Set-It-and-Forget-It Billing",
     description:
-      "Pre-scheduled repeat services and volume pricing deliver substantial savings for chain and multi-location accounts.",
-    icon: DollarSign,
+      "Flexible billing and payment options for any budget — recurring auto-pay, consolidated monthly invoicing, per-location billing, and more. We keep invoices and paperwork simple so you can set it up once and move on.",
+    icon: CreditCard,
   },
   {
     id: "quality",
@@ -55,7 +55,7 @@ export const whyChooseUs: Benefit[] = [
     id: "reliable",
     title: "Dependable Service",
     description:
-      "Pre-scheduled service, automated billing, and emergency availability when your business needs it most.",
+      "Pre-scheduled service at every location and emergency availability when your business needs it most.",
     icon: BadgeCheck,
   },
 ];
@@ -77,6 +77,6 @@ export const companyValues = [
     id: "value",
     title: "Value",
     description:
-      "Fair, transparent contract pricing with volume discounts that make sense for multi-location operators.",
+      "Fair, transparent pricing with options for every budget — plus flexible billing and volume discounts for multi-location operators.",
   },
 ] as const;

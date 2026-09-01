@@ -18,7 +18,7 @@ export function ContactSection() {
         <SectionTitle
           eyebrow="Contact Us"
           title="Request a Commercial Quote"
-          description="Speak with our team about contract window cleaning for your restaurants, retail locations, or commercial properties."
+          description="Speak with our team about contract window cleaning — and the billing option that works best for your accounts payable workflow."
         />
         <div className="mt-14 grid gap-12 lg:grid-cols-2">
           <div>

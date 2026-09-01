@@ -32,9 +32,10 @@ export function Hero() {
             Optimum Appearance Level That Your Customers and Restaurant Deserve
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Trusted Twin Cities vendor for chain restaurants, grocery stores,
-            shopping centers, and multi-location businesses. Dependable contract
-            service since {FOUNDED_YEAR}.
+            Trusted Twin Cities vendor for restaurants, grocery stores,
+            shopping centers, and multi-location businesses. Flexible billing,
+            payment options for any budget, and dependable contract service since{" "}
+            {FOUNDED_YEAR}.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Button asChild size="lg">

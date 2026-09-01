@@ -13,9 +13,9 @@ export const homeFaqs: FAQItem[] = [
   },
   {
     id: "commercial",
-    question: "Do you work with chain restaurants and retail businesses?",
+    question: "Do you work with restaurants and retail businesses?",
     answer:
-      "Yes. We specialize in contract window cleaning for chain restaurants, grocery and retail stores, shopping centers, and multi-location operators. Weekly, bi-weekly, and monthly schedules are available.",
+      "Yes. We specialize in contract window cleaning for restaurants, grocery and retail stores, shopping centers, and multi-location operators. Weekly, bi-weekly, and monthly schedules are available.",
   },
   {
     id: "ground-level",
@@ -36,6 +36,18 @@ export const homeFaqs: FAQItem[] = [
       "Call us at 612-332-1916 or fill out our contact form. We provide fast, friendly quotes for commercial contract accounts and multi-location properties.",
   },
   {
+    id: "billing",
+    question: "What billing and payment options do you offer?",
+    answer:
+      "We offer flexible, set-it-and-forget-it billing designed for commercial accounts — with payment and service options for any budget. That includes recurring auto-pay, consolidated monthly invoicing, per-location billing, and multiple payment methods. We handle the paperwork so your AP team spends less time chasing invoices.",
+  },
+  {
+    id: "paperwork",
+    question: "Do you simplify invoicing for multi-location accounts?",
+    answer:
+      "Yes. We consolidate scheduling and billing across your locations with clear, straightforward invoices. Facilities teams and property managers appreciate that our paperwork is easy to process — set it up once and leave the billing to us.",
+  },
+  {
     id: "emergency",
     question: "Do you offer emergency cleaning services?",
     answer:
@@ -54,13 +66,13 @@ export const servicesFaqs: FAQItem[] = [
     id: "multi-location",
     question: "Can you service multiple locations under one contract?",
     answer:
-      "Yes. We work with property managers, franchise groups, and multi-location operators to provide consistent scheduling and billing across your portfolio.",
+      "Yes. We work with property managers, franchise groups, and multi-location operators to provide consistent scheduling, consolidated invoicing, and simple billing across your portfolio.",
   },
   {
     id: "billing",
     question: "How does billing work for contract customers?",
     answer:
-      "Contract customers enjoy convenient, automated billing with pre-scheduled service. You receive discounts on repeat services and cleaning product purchases.",
+      "Contract customers choose from flexible billing options — recurring auto-pay, consolidated monthly invoicing, per-location billing, and more. We keep invoices and paperwork simple so your team can set it up once and forget about it.",
   },
   {
     id: "ground-level",

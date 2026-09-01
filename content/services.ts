@@ -24,15 +24,15 @@ export const primaryServices: Service[] = [
     id: "commercial-window-cleaning",
     title: "Commercial Window Cleaning",
     shortDescription:
-      "Contract window cleaning for restaurants, retail chains, malls, and multi-location businesses — weekly, bi-weekly, or monthly.",
+      "Contract window cleaning for restaurants, retail chains, malls, and multi-location businesses — with flexible billing and options for any budget.",
     description:
-      "MBM specializes in ground-level commercial window cleaning for customer-facing businesses across the Twin Cities. We serve chain restaurants, grocery retailers, shopping centers, and franchise operators who need dependable, consistent results at every location.",
+      "MBM specializes in ground-level commercial window cleaning for customer-facing businesses across the Twin Cities. We serve restaurants, grocery retailers, shopping centers, and franchise operators who need dependable, consistent results at every location.",
     features: [
       "Weekly, bi-weekly, and monthly contracts",
       "Ground-level storefront and entrance glass",
       "Multi-location and chain account programs",
-      "Pre-scheduled service with automated billing",
-      "Volume pricing for repeat contract customers",
+      "Set-it-and-forget-it billing with flexible payment options",
+      "Consolidated invoicing and simple paperwork for commercial accounts",
     ],
     icon: Building2,
     image:
@@ -90,11 +90,11 @@ export const secondaryServices = [
 ] as const;
 
 export const contractBenefits = [
+  "Set-it-and-forget-it billing with flexible payment options",
+  "Consolidated invoicing for multi-location accounts",
+  "Clear, simple paperwork your AP team can process easily",
   "Substantial savings on pre-scheduled, repeat services",
   "Volume-purchased products and equipment reduce costs",
-  "Contract customers receive discounts on cleaning products",
-  "Industrial-quality equipment for cost-effective results",
   "Liability insurance protects you against loss and damages",
   "All work is guaranteed to protect your investment",
-  "Consistent results across every location in your portfolio",
 ] as const;

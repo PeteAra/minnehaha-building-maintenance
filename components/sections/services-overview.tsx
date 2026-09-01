@@ -11,7 +11,7 @@ export function ServicesOverview() {
         <SectionTitle
           eyebrow="Our Services"
           title="Commercial Cleaning Built for Storefronts"
-          description="Contract window cleaning and exterior maintenance for restaurants, retailers, and multi-location operators across the Twin Cities."
+          description="Contract window cleaning and exterior maintenance for restaurants, retailers, and multi-location operators — with flexible billing, simple paperwork, and options for any budget."
         />
         <div className="mt-14 grid gap-8 md:grid-cols-2">
           {featuredServices.map((service) => (

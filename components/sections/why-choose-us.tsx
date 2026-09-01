@@ -10,7 +10,7 @@ export function WhyChooseUs() {
         <SectionTitle
           eyebrow="Why Choose Us"
           title="Why Facilities Teams Choose MBM"
-          description="Nearly five decades of dependable contract cleaning for Twin Cities restaurants, retailers, and commercial properties."
+          description="Nearly five decades of dependable contract cleaning — plus billing, paperwork, and pricing options for any budget."
         />
         <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {whyChooseUs.map((benefit) => {

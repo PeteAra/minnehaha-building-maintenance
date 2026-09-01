@@ -17,8 +17,8 @@ export type Industry = {
 
 export const industries: Industry[] = [
   {
-    id: "chain-restaurants",
-    title: "Chain Restaurants",
+    id: "restaurants",
+    title: "Restaurants",
     description:
       "Keep every location looking sharp with consistent ground-level window cleaning for national and regional restaurant brands, franchise groups, and multi-unit operators.",
     icon: UtensilsCrossed,
@@ -41,7 +41,7 @@ export const industries: Industry[] = [
     id: "property-management",
     title: "Property Management",
     description:
-      "A single trusted vendor for facilities teams managing multiple commercial properties — consistent quality, scheduling, and billing across every site.",
+      "A single trusted vendor for facilities teams managing multiple commercial properties — consistent quality, scheduling, and consolidated billing with simple paperwork across every site.",
     icon: Users,
   },
   {

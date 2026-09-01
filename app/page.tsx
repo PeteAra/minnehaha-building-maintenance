@@ -13,7 +13,7 @@ import { createPageMetadata } from "@/lib/metadata";
 export const metadata = createPageMetadata({
   title: "Commercial Window Cleaning for Restaurants, Retail & Malls",
   description:
-    "Minnehaha Building Maintenance Inc. — contract ground-level window cleaning for Twin Cities chain restaurants, grocery stores, shopping centers, and multi-location businesses since 1978.",
+    "Minnehaha Building Maintenance Inc. — contract ground-level window cleaning for Twin Cities restaurants, grocery stores, shopping centers, and multi-location businesses since 1978.",
   path: "/",
 });
 
