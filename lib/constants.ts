@@ -34,8 +34,9 @@ export const FOOTER_SERVICE_LINKS = [
   { href: "/services#residential-window-cleaning", label: "Residential (Limited)" },
 ] as const;
 
-export const LOGO_SRC =
-  "https://static.wixstatic.com/media/948629_6e7bfa4182ae47123467f848f4ef5fa3.png/v1/fill/w_772,h_196,al_c,lg_1,q_85,enc_avif,quality_auto/948629_6e7bfa4182ae47123467f848f4ef5fa3.png";
+export const LOGO_SRC = "/images/logo.svg";
+export const LOGO_LIGHT_SRC = "/images/logo-light.svg";
+export const LOGO_MARK_SRC = "/images/logo-mark.svg";
 
 export const MAP_EMBED_URL =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2828.0!2d-93.138!3d44.883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s1200%20Centre%20Pointe%20Curve%2C%20Mendota%20Heights%2C%20MN%2055120!5e0!3m2!1sen!2sus!4v1";

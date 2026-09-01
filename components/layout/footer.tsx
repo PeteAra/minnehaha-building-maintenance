@@ -1,12 +1,13 @@
 import {
   ADDRESS,
   FOOTER_SERVICE_LINKS,
+  LOGO_LIGHT_SRC,
   NAV_LINKS,
   PHONE,
   PHONE_HREF,
   SITE_NAME,
-  SITE_SHORT_NAME,
 } from "@/lib/constants";
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "./container";
 
@@ -18,8 +19,14 @@ export function Footer() {
       <Container className="py-16">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <p className="text-lg font-bold">{SITE_SHORT_NAME}</p>
-            <p className="mt-2 text-sm leading-relaxed text-white/70">
+            <Image
+              src={LOGO_LIGHT_SRC}
+              alt={SITE_NAME}
+              width={260}
+              height={52}
+              className="h-11 w-auto object-contain"
+            />
+            <p className="mt-4 text-sm leading-relaxed text-white/70">
               {SITE_NAME} — commercial contract window cleaning for
               restaurants, retailers, and multi-location businesses across the
               Twin Cities since 1978.

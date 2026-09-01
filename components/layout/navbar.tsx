@@ -9,6 +9,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import {
+  LOGO_LIGHT_SRC,
   LOGO_SRC,
   NAV_LINKS,
   PHONE,
@@ -27,6 +28,8 @@ export function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const isHome = pathname === "/";
+  const useLightNav = isHome && !scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -58,14 +61,11 @@ export function Navbar() {
             className="relative flex shrink-0 items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             <Image
-              src={LOGO_SRC}
+              src={!scrolled && !isHome ? LOGO_LIGHT_SRC : LOGO_SRC}
               alt={SITE_SHORT_NAME}
-              width={240}
-              height={61}
-              className={cn(
-                "h-12 w-auto object-contain transition-all sm:h-14",
-                !scrolled && "brightness-0 invert"
-              )}
+              width={280}
+              height={56}
+              className="h-12 w-auto object-contain transition-all sm:h-14"
               priority
             />
           </Link>
@@ -82,7 +82,7 @@ export function Navbar() {
                     href={link.href}
                     className={cn(
                       "rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-                      scrolled
+                      scrolled || useLightNav
                         ? isActive
                           ? "text-primary"
                           : "text-muted-foreground hover:text-primary"
@@ -103,7 +103,7 @@ export function Navbar() {
             <Button
               asChild
               size="sm"
-              variant={scrolled ? "default" : "outline"}
+              variant={scrolled || useLightNav ? "default" : "outline"}
               className="hidden sm:inline-flex"
             >
               <a href={PHONE_HREF}>
@@ -119,7 +119,8 @@ export function Navbar() {
                   size="icon"
                   className={cn(
                     "size-14 shrink-0 [&_svg]:!size-9 lg:hidden",
-                    !scrolled && "text-white hover:bg-white/10 hover:text-white"
+                    !scrolled && !isHome &&
+                      "text-white hover:bg-white/10 hover:text-white"
                   )}
                   aria-label="Open menu"
                 >

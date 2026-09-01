@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" fill="none" role="img" aria-label="Minnehaha Building Maintenance Inc.">
+  <defs>
+    <linearGradient id="mbm-grad" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B4F8A"/>
+      <stop offset="1" stop-color="#3B9AE1"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="4" width="56" height="56" rx="14" fill="url(#mbm-grad)"/>
+  <text x="28" y="39" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="#FFFFFF" letter-spacing="-0.06em">MBM</text>
+  <rect x="38" y="14" width="10" height="10" rx="2" stroke="#FFFFFF" stroke-width="1.5" opacity=".4"/>
+  <text x="72" y="30" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" font-weight="700" fill="#0F3460" letter-spacing="-0.02em">Minnehaha</text>
+  <text x="72" y="50" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12.5" font-weight="600" fill="#334155" letter-spacing="0.06em">BUILDING MAINTENANCE INC.</text>
+</svg>
