@@ -20,42 +20,42 @@ export const whyChooseUs: Benefit[] = [
     id: "experience",
     title: "Since 1978",
     description:
-      "Nearly five decades of trusted service make us the premier window cleaning company in the Twin Cities.",
+      "Nearly five decades serving Twin Cities restaurants, retailers, and commercial properties with dependable contract cleaning.",
     icon: Clock,
   },
   {
-    id: "trained",
-    title: "Trained Professionals",
+    id: "chains",
+    title: "Built for Multi-Location Accounts",
     description:
-      "Our personnel are professionally trained and supervised for consistent, dependable results every visit.",
+      "We understand what facilities teams and franchise operators need — consistent quality, reliable scheduling, and straightforward billing across every site.",
     icon: Users,
   },
   {
     id: "insured",
     title: "Fully Insured",
     description:
-      "Liability insurance protects you against loss and damages. All work is guaranteed.",
+      "Liability insurance protects your business against loss and damages. All work is guaranteed.",
     icon: Shield,
   },
   {
     id: "value",
     title: "Contract Savings",
     description:
-      "Pre-scheduled repeat services and volume pricing deliver substantial savings for contract customers.",
+      "Pre-scheduled repeat services and volume pricing deliver substantial savings for chain and multi-location accounts.",
     icon: DollarSign,
   },
   {
     id: "quality",
-    title: "Industry-Leading Quality",
+    title: "Ground-Level Expertise",
     description:
-      "We use proper cleaning products and industrial-quality equipment for superior results.",
+      "We specialize in storefront and entrance glass — the customer-facing work restaurants, grocers, and retailers depend on.",
     icon: Sparkles,
   },
   {
     id: "reliable",
     title: "Dependable Service",
     description:
-      "Pre-scheduled service, automated billing, and emergency availability when you need us most.",
+      "Pre-scheduled service, automated billing, and emergency availability when your business needs it most.",
     icon: BadgeCheck,
   },
 ];
@@ -65,18 +65,18 @@ export const companyValues = [
     id: "reliability",
     title: "Reliability",
     description:
-      "We show up on schedule, every time. Your property maintenance runs smoothly with MBM.",
+      "We show up on schedule at every location. Your facilities team can count on MBM across your entire portfolio.",
   },
   {
     id: "quality",
     title: "Quality",
     description:
-      "Industry-leading techniques and equipment ensure your property always looks its best.",
+      "Industry-leading techniques and equipment keep storefronts and entrances meeting the standards your brand demands.",
   },
   {
     id: "value",
     title: "Value",
     description:
-      "Fair, transparent pricing with contract discounts that protect your bottom line.",
+      "Fair, transparent contract pricing with volume discounts that make sense for multi-location operators.",
   },
 ] as const;

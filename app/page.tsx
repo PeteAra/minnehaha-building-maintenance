@@ -12,9 +12,9 @@ import { WhyChooseUs } from "@/components/sections/why-choose-us";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Twin Cities Window Cleaning & Building Maintenance",
+  title: "Commercial Window Cleaning for Restaurants, Retail & Malls",
   description:
-    "Minnehaha Building Maintenance Inc. — professional commercial and residential window cleaning and building maintenance serving Minneapolis, St. Paul, and the Twin Cities since 1978.",
+    "Minnehaha Building Maintenance Inc. — contract ground-level window cleaning for Twin Cities chain restaurants, grocery stores, shopping centers, and multi-location businesses since 1978.",
   path: "/",
 });
 
@@ -22,11 +22,11 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <CompanyIntro />
-      <ServicesOverview />
-      <WhyChooseUs />
-      <StatsBand />
       <IndustriesGrid />
+      <WhyChooseUs />
+      <ServicesOverview />
+      <StatsBand />
+      <CompanyIntro />
       <ServiceAreasPreview />
       <Testimonials />
       <FAQ />

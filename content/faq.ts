@@ -13,15 +13,15 @@ export const homeFaqs: FAQItem[] = [
   },
   {
     id: "commercial",
-    question: "Do you offer commercial window cleaning contracts?",
+    question: "Do you work with chain restaurants and retail businesses?",
     answer:
-      "Yes. We specialize in weekly, bi-weekly, and monthly contract window cleaning for commercial properties. Contract customers receive substantial savings on pre-scheduled repeat services.",
+      "Yes. We specialize in contract window cleaning for chain restaurants, grocery and retail stores, shopping centers, and multi-location operators. Weekly, bi-weekly, and monthly schedules are available.",
   },
   {
-    id: "residential",
-    question: "Do you clean residential windows?",
+    id: "ground-level",
+    question: "Do you clean high-rise or multi-story buildings?",
     answer:
-      "Absolutely. We provide residential window cleaning for homes across the Twin Cities with free estimates and flexible scheduling.",
+      "Our focus is ground-level storefront and entrance glass — the work restaurants, retailers, and mall tenants need most. We do not perform high-rise window cleaning.",
   },
   {
     id: "insured",
@@ -31,30 +31,30 @@ export const homeFaqs: FAQItem[] = [
   },
   {
     id: "estimate",
-    question: "How do I get a free estimate?",
+    question: "How do I request a commercial quote?",
     answer:
-      "Call us at 612-332-1916 or fill out our contact form. We provide fast, friendly, and free estimates for all services.",
+      "Call us at 612-332-1916 or fill out our contact form. We provide fast, friendly quotes for commercial contract accounts and multi-location properties.",
   },
   {
     id: "emergency",
     question: "Do you offer emergency cleaning services?",
     answer:
-      "Yes. We are equipped to provide emergency cleaning on short notice for both commercial and residential clients.",
+      "Yes. We are equipped to provide emergency exterior cleaning on short notice for commercial clients.",
   },
 ];
 
 export const servicesFaqs: FAQItem[] = [
   {
     id: "frequency",
-    question: "How often should commercial windows be cleaned?",
+    question: "How often should restaurant and retail windows be cleaned?",
     answer:
-      "Most commercial properties benefit from weekly, bi-weekly, or monthly service depending on foot traffic, location, and visibility. We help you choose the right schedule.",
+      "Most restaurants and retail locations benefit from weekly, bi-weekly, or monthly service depending on foot traffic, weather, and brand standards. We help facilities teams choose the right schedule for each location.",
   },
   {
-    id: "products",
-    question: "What cleaning products do you use?",
+    id: "multi-location",
+    question: "Can you service multiple locations under one contract?",
     answer:
-      "We use professional-grade, industry-approved cleaning products and equipment. MBM constantly researches and upgrades its products and service techniques.",
+      "Yes. We work with property managers, franchise groups, and multi-location operators to provide consistent scheduling and billing across your portfolio.",
   },
   {
     id: "billing",
@@ -63,9 +63,9 @@ export const servicesFaqs: FAQItem[] = [
       "Contract customers enjoy convenient, automated billing with pre-scheduled service. You receive discounts on repeat services and cleaning product purchases.",
   },
   {
-    id: "high-rise",
-    question: "Can you clean multi-story buildings?",
+    id: "ground-level",
+    question: "What types of buildings do you service?",
     answer:
-      "Yes. Our industrial-quality equipment and trained professionals handle multi-story commercial buildings throughout the metro area.",
+      "We specialize in ground-level commercial work — restaurant storefronts, grocery and retail entrances, mall tenant spaces, and other customer-facing commercial properties. We do not perform high-rise window cleaning.",
   },
 ];

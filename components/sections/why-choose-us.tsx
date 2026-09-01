@@ -5,12 +5,12 @@ import { whyChooseUs } from "@/content/company";
 
 export function WhyChooseUs() {
   return (
-    <AnimatedSection className="py-20 lg:py-28">
+    <AnimatedSection className="bg-muted py-20 lg:py-28">
       <Container>
         <SectionTitle
           eyebrow="Why Choose Us"
-          title="Why Is MBM the Right Choice?"
-          description="Nearly five decades of experience, professional training, and a commitment to value set us apart."
+          title="Why Facilities Teams Choose MBM"
+          description="Nearly five decades of dependable contract cleaning for Twin Cities restaurants, retailers, and commercial properties."
         />
         <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {whyChooseUs.map((benefit) => {

@@ -12,7 +12,7 @@ import Link from "next/link";
 export const metadata = createPageMetadata({
   title: "Industries Served",
   description:
-    "Minnehaha Building Maintenance serves office buildings, property management companies, medical facilities, retail, industrial sites, and restaurants across the Twin Cities.",
+    "Contract window cleaning for Twin Cities chain restaurants, grocery retailers, shopping centers, property management firms, and multi-location operators.",
   path: "/industries",
 });
 
@@ -21,15 +21,15 @@ export default function IndustriesPage() {
     <>
       <PageHero
         title="Industries We Serve"
-        description="Specialized window cleaning and building maintenance for commercial properties across the Minneapolis and St. Paul metro."
+        description="Ground-level window cleaning and storefront maintenance for restaurants, grocery chains, malls, and multi-location commercial properties."
       />
 
       <AnimatedSection className="py-20 lg:py-28">
         <Container>
           <SectionTitle
-            eyebrow="Commercial Expertise"
-            title="Tailored Solutions for Every Property Type"
-            description="We understand the unique needs of each industry and deliver consistent, professional results."
+            eyebrow="Commercial Focus"
+            title="Built for Restaurants, Retail Chains & Mall Properties"
+            description="We partner with facilities teams and operators who manage customer-facing storefronts across the Twin Cities metro."
           />
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {industries.map((industry) => (
@@ -43,14 +43,15 @@ export default function IndustriesPage() {
         <Container>
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-2xl font-bold text-foreground">
-              Don&apos;t see your industry?
+              Managing multiple locations?
             </h2>
             <p className="mt-4 text-muted-foreground">
-              We work with a wide range of commercial and residential clients.
-              Contact us to discuss your specific needs.
+              We work with franchise groups, property managers, and regional
+              operators who need consistent storefront cleaning across their
+              portfolio. Contact us to discuss a contract program.
             </p>
             <Button asChild size="lg" className="mt-8">
-              <Link href="/contact">Contact Us Today</Link>
+              <Link href="/contact">Request a Commercial Quote</Link>
             </Button>
           </div>
         </Container>

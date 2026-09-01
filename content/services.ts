@@ -16,6 +16,7 @@ export type Service = {
   features: string[];
   icon: LucideIcon;
   image: string;
+  featured?: boolean;
 };
 
 export const primaryServices: Service[] = [
@@ -23,64 +24,68 @@ export const primaryServices: Service[] = [
     id: "commercial-window-cleaning",
     title: "Commercial Window Cleaning",
     shortDescription:
-      "Weekly, bi-weekly, and monthly contract window cleaning for storefronts, offices, and commercial properties.",
+      "Contract window cleaning for restaurants, retail chains, malls, and multi-location businesses — weekly, bi-weekly, or monthly.",
     description:
-      "Keep your business looking its best with dependable commercial window cleaning tailored to your schedule. We specialize in contract service for storefronts, restaurants, office buildings, and retail spaces across the Twin Cities.",
+      "MBM specializes in ground-level commercial window cleaning for customer-facing businesses across the Twin Cities. We serve chain restaurants, grocery retailers, shopping centers, and franchise operators who need dependable, consistent results at every location.",
     features: [
       "Weekly, bi-weekly, and monthly contracts",
-      "Storefront and high-rise capabilities",
+      "Ground-level storefront and entrance glass",
+      "Multi-location and chain account programs",
       "Pre-scheduled service with automated billing",
-      "Emergency cleaning available on short notice",
-      "Volume pricing for repeat customers",
+      "Volume pricing for repeat contract customers",
     ],
     icon: Building2,
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
-  },
-  {
-    id: "residential-window-cleaning",
-    title: "Residential Window Cleaning",
-    shortDescription:
-      "Crystal-clear windows for homes across Minneapolis, St. Paul, and surrounding suburbs.",
-    description:
-      "Enjoy spotless windows without the hassle. Our trained professionals use industry-leading equipment and eco-friendly products to deliver streak-free results for homeowners throughout the metro area.",
-    features: [
-      "Interior and exterior window cleaning",
-      "Screen cleaning available",
-      "One-time or recurring service",
-      "Free friendly estimates",
-      "Fully insured technicians",
-    ],
-    icon: Home,
-    image:
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+      "https://images.unsplash.com/photo-1604719312566-8912b0b922cb?w=800&q=80",
+    featured: true,
   },
   {
     id: "building-maintenance",
     title: "Building Maintenance",
     shortDescription:
-      "Comprehensive exterior and interior maintenance to protect and enhance your property.",
+      "Storefront exterior maintenance — pressure washing, awnings, gutters, and more to keep your business looking professional.",
     description:
-      "Beyond windows, MBM provides a full range of building maintenance services to keep your property clean, safe, and professional. From pressure washing to gutter care, we handle it all.",
+      "Beyond windows, MBM keeps commercial storefronts and ground-level exteriors clean and well-maintained. From pressure washing entryways to awning and gutter care, we help restaurants, retailers, and mall tenants make the right first impression.",
     features: [
-      "Pressure washing",
-      "Gutter cleaning and repair",
+      "Storefront pressure washing",
       "Awning cleaning and repair",
+      "Gutter cleaning and repair",
       "Construction cleanup",
-      "Dusting and emergency cleaning",
+      "Emergency exterior cleaning",
     ],
     icon: Hammer,
     image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
+    featured: true,
+  },
+  {
+    id: "residential-window-cleaning",
+    title: "Residential Window Cleaning",
+    shortDescription:
+      "Also available for homeowners. Commercial contract accounts are our primary focus.",
+    description:
+      "While our primary business is commercial contract cleaning for restaurants, retailers, and multi-location operators, we also offer residential window cleaning for homeowners in the Twin Cities metro. Contact us to inquire about availability.",
+    features: [
+      "Interior and exterior window cleaning",
+      "Screen cleaning available",
+      "Subject to scheduling availability",
+      "Fully insured technicians",
+    ],
+    icon: Home,
+    image:
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
+    featured: false,
   },
 ];
+
+export const featuredServices = primaryServices.filter((s) => s.featured);
 
 export const secondaryServices = [
   { title: "Pressure Washing", icon: Droplets },
   { title: "Gutter Cleaning & Repair", icon: Wind },
   { title: "Awning Cleaning & Repair", icon: Sparkles },
   { title: "Construction Cleanup", icon: Hammer },
-  { title: "Dusting", icon: Sparkles },
+  { title: "Storefront Dusting", icon: Sparkles },
   { title: "Emergency Cleaning", icon: Building2 },
 ] as const;
 
@@ -91,5 +96,5 @@ export const contractBenefits = [
   "Industrial-quality equipment for cost-effective results",
   "Liability insurance protects you against loss and damages",
   "All work is guaranteed to protect your investment",
-  "Services completed regularly, properly, and cost-effectively",
+  "Consistent results across every location in your portfolio",
 ] as const;

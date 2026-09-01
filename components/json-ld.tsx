@@ -37,7 +37,7 @@ export function JsonLd() {
       },
     ],
     description:
-      "Professional commercial and residential window cleaning and building maintenance serving the Twin Cities metro since 1978.",
+      "Commercial contract window cleaning for Twin Cities restaurants, grocery stores, shopping centers, and multi-location businesses since 1978.",
     sameAs: [],
   };
 

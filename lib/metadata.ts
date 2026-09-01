@@ -53,7 +53,7 @@ export const defaultMetadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Twin Cities window cleaning and building maintenance since 1978. Commercial and residential services across Minneapolis and St. Paul.",
+    "Twin Cities commercial window cleaning for restaurants, retail, and malls since 1978. Contract ground-level storefront cleaning across Minneapolis and St. Paul.",
   robots: {
     index: true,
     follow: true,

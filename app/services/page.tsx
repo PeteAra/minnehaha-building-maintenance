@@ -15,9 +15,9 @@ import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 
 export const metadata = createPageMetadata({
-  title: "Services",
+  title: "Commercial Cleaning Services",
   description:
-    "Commercial window cleaning, residential window cleaning, and building maintenance services across the Twin Cities metro. Weekly, bi-weekly, and monthly contracts available.",
+    "Contract ground-level window cleaning and storefront maintenance for Twin Cities restaurants, grocery chains, shopping centers, and multi-location businesses.",
   path: "/services",
 });
 
@@ -25,25 +25,37 @@ export default function ServicesPage() {
   return (
     <>
       <PageHero
-        title="Our Services"
-        description="Dependable, industry-leading cleaning and maintenance services for commercial and residential properties."
+        title="Commercial Cleaning Services"
+        description="Contract window cleaning and storefront maintenance for restaurants, retailers, malls, and multi-location businesses across the Twin Cities."
       />
 
       {primaryServices.map((service, index) => {
         const Icon = service.icon;
         const isReversed = index % 2 === 1;
+        const isResidential = service.id === "residential-window-cleaning";
 
         return (
           <AnimatedSection
             key={service.id}
             id={service.id}
-            className={index % 2 === 0 ? "py-20 lg:py-28" : "bg-muted py-20 lg:py-28"}
+            className={
+              isResidential
+                ? "border-t border-border bg-muted/50 py-16 lg:py-20"
+                : index % 2 === 0
+                  ? "py-20 lg:py-28"
+                  : "bg-muted py-20 lg:py-28"
+            }
           >
             <Container>
+              {isResidential && (
+                <p className="mb-8 text-center text-sm font-medium uppercase tracking-wider text-muted-foreground">
+                  Also Available
+                </p>
+              )}
               <div
                 className={`grid items-center gap-12 lg:grid-cols-2 lg:gap-16 ${
                   isReversed ? "lg:[&>*:first-child]:order-2" : ""
-                }`}
+                } ${isResidential ? "opacity-90" : ""}`}
               >
                 <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
                   <Image
@@ -81,7 +93,7 @@ export default function ServicesPage() {
               {service.id === "building-maintenance" && (
                 <div className="mt-16">
                   <h3 className="text-xl font-bold text-foreground">
-                    Additional Maintenance Services
+                    Additional Storefront Maintenance
                   </h3>
                   <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {secondaryServices.map((sub) => {
@@ -118,7 +130,8 @@ export default function ServicesPage() {
               Why Contract Service Saves You Money
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-white/80">
-              Pre-scheduled, repeat services deliver substantial savings and peace of mind.
+              Pre-scheduled, repeat services deliver substantial savings for
+              chain and multi-location accounts.
             </p>
           </div>
           <ul className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2">
@@ -141,7 +154,7 @@ export default function ServicesPage() {
             <SectionTitle
               eyebrow="FAQ"
               title="Service Questions"
-              description="Common questions about our cleaning and maintenance services."
+              description="Common questions from facilities teams and commercial property managers."
             />
             <div className="mt-10">
               <FAQAccordion items={servicesFaqs} />

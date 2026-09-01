@@ -20,8 +20,9 @@ export function Footer() {
           <div>
             <p className="text-lg font-bold">{SITE_SHORT_NAME}</p>
             <p className="mt-2 text-sm leading-relaxed text-white/70">
-              {SITE_NAME} — professional window cleaning and building
-              maintenance serving the Twin Cities since 1978.
+              {SITE_NAME} — commercial contract window cleaning for
+              restaurants, retailers, and multi-location businesses across the
+              Twin Cities since 1978.
             </p>
           </div>
 

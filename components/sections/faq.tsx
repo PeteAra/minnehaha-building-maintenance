@@ -12,7 +12,7 @@ export function FAQ() {
           <SectionTitle
             eyebrow="FAQ"
             title="Frequently Asked Questions"
-            description="Quick answers to common questions about our services and coverage."
+            description="Common questions from facilities teams and commercial property managers."
           />
           <div className="mt-10">
             <FAQAccordion items={homeFaqs} />

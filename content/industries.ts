@@ -1,10 +1,10 @@
 import {
   Building2,
-  Factory,
-  HeartPulse,
   ShoppingBag,
+  ShoppingCart,
   Store,
   Users,
+  UtensilsCrossed,
   type LucideIcon,
 } from "lucide-react";
 
@@ -17,45 +17,45 @@ export type Industry = {
 
 export const industries: Industry[] = [
   {
-    id: "office-buildings",
-    title: "Office Buildings",
+    id: "chain-restaurants",
+    title: "Chain Restaurants",
     description:
-      "Maintain a polished, professional appearance for tenants and visitors with reliable scheduled window cleaning and building maintenance.",
-    icon: Building2,
+      "Keep every location looking sharp with consistent ground-level window cleaning for national and regional restaurant brands, franchise groups, and multi-unit operators.",
+    icon: UtensilsCrossed,
+  },
+  {
+    id: "grocery-retail",
+    title: "Grocery & Retail Chains",
+    description:
+      "Crystal-clear storefront glass for supermarkets, big-box retailers, and chain stores where curb appeal drives foot traffic and brand perception.",
+    icon: ShoppingCart,
+  },
+  {
+    id: "shopping-centers",
+    title: "Shopping Centers & Malls",
+    description:
+      "Dependable contract service for mall properties, strip centers, and retail complexes with high-visibility entrances and storefronts.",
+    icon: ShoppingBag,
   },
   {
     id: "property-management",
     title: "Property Management",
     description:
-      "Partner with a trusted vendor who delivers consistent quality across multiple properties with flexible contract scheduling.",
+      "A single trusted vendor for facilities teams managing multiple commercial properties — consistent quality, scheduling, and billing across every site.",
     icon: Users,
   },
   {
-    id: "medical-facilities",
-    title: "Medical Facilities",
+    id: "franchise-operators",
+    title: "Franchise & Multi-Location Operators",
     description:
-      "Spotless windows and clean exteriors that reflect the high standards of care your patients and staff expect.",
-    icon: HeartPulse,
-  },
-  {
-    id: "retail-malls",
-    title: "Retail & Malls",
-    description:
-      "First impressions matter. Keep storefronts and common areas sparkling to attract and retain customers.",
-    icon: ShoppingBag,
-  },
-  {
-    id: "industrial",
-    title: "Industrial Buildings",
-    description:
-      "Heavy-duty cleaning solutions for warehouses, manufacturing facilities, and industrial complexes.",
-    icon: Factory,
-  },
-  {
-    id: "restaurants",
-    title: "Restaurants",
-    description:
-      "Clean windows and exteriors that showcase your establishment and meet health and safety expectations.",
+      "One partner for all your locations. Pre-scheduled contract cleaning that keeps every storefront meeting brand standards without the hassle.",
     icon: Store,
+  },
+  {
+    id: "retail-storefronts",
+    title: "Retail Storefronts",
+    description:
+      "Ground-level window and exterior cleaning for standalone retail locations, restaurant outposts, and customer-facing commercial entrances.",
+    icon: Building2,
   },
 ];

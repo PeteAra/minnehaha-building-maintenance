@@ -10,8 +10,8 @@ export function Testimonials() {
       <Container>
         <SectionTitle
           eyebrow="Testimonials"
-          title="What Our Clients Say"
-          description="Trusted by property managers, business owners, and homeowners across the Twin Cities."
+          title="Trusted by Facilities & Operations Teams"
+          description="Property managers, restaurant operators, and retail facilities teams across the Twin Cities rely on MBM."
         />
         <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial) => (

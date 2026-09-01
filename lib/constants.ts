@@ -2,7 +2,7 @@ export const SITE_NAME = "Minnehaha Building Maintenance Inc.";
 export const SITE_SHORT_NAME = "MBM Services";
 export const SITE_URL = "https://www.mbminc-services.com";
 export const SITE_DESCRIPTION =
-  "Professional commercial and residential window cleaning and building maintenance serving Minneapolis, St. Paul, and the Twin Cities metro since 1978.";
+  "Commercial contract window cleaning for Twin Cities restaurants, grocery stores, shopping centers, and multi-location businesses. Ground-level storefront cleaning since 1978.";
 
 export const PHONE = "612-332-1916";
 export const PHONE_HREF = "tel:+16123321916";
@@ -30,8 +30,8 @@ export const NAV_LINKS = [
 
 export const FOOTER_SERVICE_LINKS = [
   { href: "/services#commercial-window-cleaning", label: "Commercial Window Cleaning" },
-  { href: "/services#residential-window-cleaning", label: "Residential Window Cleaning" },
   { href: "/services#building-maintenance", label: "Building Maintenance" },
+  { href: "/services#residential-window-cleaning", label: "Residential (Limited)" },
 ] as const;
 
 export const LOGO_SRC =

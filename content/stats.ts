@@ -10,13 +10,13 @@ export const companyStats: Stat[] = [
     id: "years",
     value: 48,
     suffix: "+",
-    label: "Years of Experience",
+    label: "Years Serving Twin Cities Businesses",
   },
   {
     id: "clients",
     value: 500,
     suffix: "+",
-    label: "Commercial Clients Served",
+    label: "Commercial Contract Accounts",
   },
   {
     id: "insured",

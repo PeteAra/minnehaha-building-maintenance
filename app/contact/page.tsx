@@ -17,7 +17,7 @@ import { Clock, MapPin, Phone } from "lucide-react";
 export const metadata = createPageMetadata({
   title: "Contact",
   description:
-    "Contact Minnehaha Building Maintenance for a fast, free estimate. Call 612-332-1916 or fill out our contact form.",
+    "Request a commercial quote from Minnehaha Building Maintenance. Call 612-332-1916 or contact us about contract window cleaning for restaurants, retail, and mall properties.",
   path: "/contact",
 });
 
@@ -25,8 +25,8 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
-        title="Contact Us"
-        description="We are only a phone call away. Reach out for a fast, friendly, and free estimate."
+        title="Request a Commercial Quote"
+        description="Contact our team about contract window cleaning for your restaurants, retail locations, or commercial properties."
       />
 
       <AnimatedSection className="py-20 lg:py-28">
@@ -54,7 +54,7 @@ export default function ContactPage() {
                       {PHONE}
                     </a>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      Call for a fast free quote
+                      Call for a fast commercial quote
                     </p>
                   </div>
                 </div>

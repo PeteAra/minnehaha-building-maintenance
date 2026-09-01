@@ -17,8 +17,8 @@ export function ContactSection() {
       <Container>
         <SectionTitle
           eyebrow="Contact Us"
-          title="Get in Touch"
-          description="We are only a phone call away. Reach out for a fast, friendly, and free estimate."
+          title="Request a Commercial Quote"
+          description="Speak with our team about contract window cleaning for your restaurants, retail locations, or commercial properties."
         />
         <div className="mt-14 grid gap-12 lg:grid-cols-2">
           <div>
@@ -59,8 +59,10 @@ export function ContactSection() {
                 <li className="flex items-start gap-3">
                   <Mail className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
                   <div>
-                    <p className="text-sm font-medium text-foreground">Estimates</p>
-                    <p className="text-muted-foreground">Fast, free, and friendly</p>
+                    <p className="text-sm font-medium text-foreground">Quotes</p>
+                    <p className="text-muted-foreground">
+                      Fast, friendly commercial estimates
+                    </p>
                   </div>
                 </li>
               </ul>

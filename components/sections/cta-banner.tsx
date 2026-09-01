@@ -10,8 +10,8 @@ type CTABannerProps = {
 };
 
 export function CTABanner({
-  title = "Ready for a Fast, Free Estimate?",
-  description = "Call Minnehaha Building Maintenance today. We can help keep your property looking its best.",
+  title = "Ready to Discuss a Commercial Contract?",
+  description = "Contact Minnehaha Building Maintenance for a fast, friendly quote on contract window cleaning for your restaurants, retail locations, or commercial properties.",
 }: CTABannerProps) {
   return (
     <section className="bg-primary-dark py-16 lg:py-20">
@@ -21,7 +21,7 @@ export function CTABanner({
           <p className="mt-4 text-lg text-white/80">{description}</p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg">
-              <Link href="/contact">Get a Free Estimate</Link>
+              <Link href="/contact">Request a Commercial Quote</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
               <a href={PHONE_HREF}>

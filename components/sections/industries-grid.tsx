@@ -8,12 +8,12 @@ import Link from "next/link";
 
 export function IndustriesGrid() {
   return (
-    <AnimatedSection className="bg-muted py-20 lg:py-28">
+    <AnimatedSection className="py-20 lg:py-28">
       <Container>
         <SectionTitle
-          eyebrow="Industries Served"
-          title="Trusted by Businesses Across the Twin Cities"
-          description="We provide specialized cleaning and maintenance for a wide range of commercial properties."
+          eyebrow="Who We Serve"
+          title="Built for Chain Restaurants, Retail & Mall Properties"
+          description="We partner with facilities teams, property managers, and multi-location operators who need consistent storefront cleaning across the Twin Cities."
         />
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {industries.map((industry) => (
@@ -22,7 +22,7 @@ export function IndustriesGrid() {
         </div>
         <div className="mt-12 text-center">
           <Button asChild variant="secondary" size="lg">
-            <Link href="/industries">Explore All Industries</Link>
+            <Link href="/industries">Explore Industries We Serve</Link>
           </Button>
         </div>
       </Container>

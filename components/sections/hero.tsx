@@ -10,8 +10,8 @@ export function Hero() {
   return (
     <section className="relative flex min-h-[90vh] items-center overflow-hidden bg-primary-dark">
       <Image
-        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80"
-        alt="Modern commercial building with clean glass windows"
+        src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1920&q=80"
+        alt="Restaurant storefront with clean ground-level windows"
         fill
         priority
         className="object-cover"
@@ -22,19 +22,19 @@ export function Hero() {
       <Container className="relative z-10 py-32">
         <div className="max-w-3xl">
           <Badge variant="accent" className="mb-6 bg-white/10 text-white">
-            Trusted Since {FOUNDED_YEAR}
+            Commercial Contract Cleaning Since {FOUNDED_YEAR}
           </Badge>
           <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Twin Cities Building Maintenance You Can Trust Since {FOUNDED_YEAR}
+            Building Maintenance for Restaurants, Retail & Malls
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80 sm:text-xl">
-            Professional window cleaning and building maintenance for commercial
-            properties across Minneapolis and St. Paul. Dependable, insured, and
-            industry-leading service.
+            Trusted Twin Cities vendor for chain restaurants, grocery stores,
+            shopping centers, and multi-location businesses. Dependable contract
+            service since {FOUNDED_YEAR}.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Button asChild size="lg">
-              <Link href="/contact">Get a Free Estimate</Link>
+              <Link href="/contact">Request a Commercial Quote</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
               <a href={PHONE_HREF}>

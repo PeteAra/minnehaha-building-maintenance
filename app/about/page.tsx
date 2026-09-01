@@ -13,7 +13,7 @@ import Image from "next/image";
 export const metadata = createPageMetadata({
   title: "About Us",
   description:
-    "Learn about Minnehaha Building Maintenance Inc. — the Twin Cities premier window cleaning and building maintenance company since 1978.",
+    "Learn about Minnehaha Building Maintenance Inc. — Twin Cities commercial contract window cleaning for restaurants, retailers, and multi-location businesses since 1978.",
   path: "/about",
 });
 
@@ -22,7 +22,7 @@ export default function AboutPage() {
     <>
       <PageHero
         title="About Minnehaha Building Maintenance"
-        description={`Serving the Twin Cities with dependable, industry-leading cleaning services since ${FOUNDED_YEAR}.`}
+        description={`Commercial contract cleaning for Twin Cities restaurants, retailers, and multi-location businesses since ${FOUNDED_YEAR}.`}
       />
 
       <AnimatedSection className="py-20 lg:py-28">
@@ -31,26 +31,28 @@ export default function AboutPage() {
             <div>
               <SectionTitle
                 eyebrow="Our Story"
-                title="The Premier Window Cleaning Company in the Twin Cities"
+                title="Commercial Window Cleaning for the Twin Cities"
                 align="left"
               />
               <div className="mt-8 space-y-4 leading-relaxed text-muted-foreground">
                 <p>
                   Since {FOUNDED_YEAR}, Minnehaha Building Maintenance Inc. has
-                  served the individual cleaning needs of our customers with fast,
-                  professional services. Our skilled cleaning professionals always
-                  assure dependable, industry-leading results.
+                  served the commercial cleaning needs of restaurants, grocery
+                  stores, shopping centers, and multi-location businesses across
+                  the Twin Cities. Our skilled crews deliver dependable,
+                  industry-leading results at ground level.
                 </p>
                 <p>
-                  MBM is the oldest and premier window cleaning company in the
-                  Metro Minneapolis / St. Paul area. We specialize in weekly,
-                  bi-weekly, and monthly contract cleaning — the most cost-effective
-                  option for our customers.
+                  MBM is the oldest and premier commercial window cleaning
+                  company in the Metro Minneapolis / St. Paul area. We
+                  specialize in weekly, bi-weekly, and monthly contract cleaning
+                  — the most cost-effective option for businesses with multiple
+                  locations.
                 </p>
                 <p>
-                  Our personnel are professionally trained and supervised. We only
-                  use proper cleaning products and equipment, and MBM constantly
-                  researches and upgrades its products and service techniques.
+                  Our personnel are professionally trained and supervised. We use
+                  proper cleaning products and equipment, and MBM constantly
+                  researches and upgrades its service techniques.
                 </p>
               </div>
             </div>

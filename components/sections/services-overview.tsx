@@ -2,7 +2,7 @@ import { AnimatedSection } from "@/components/animated-section";
 import { ServiceCard } from "@/components/cards/service-card";
 import { Container } from "@/components/layout/container";
 import { SectionTitle } from "@/components/section-title";
-import { primaryServices } from "@/content/services";
+import { featuredServices } from "@/content/services";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -12,15 +12,24 @@ export function ServicesOverview() {
       <Container>
         <SectionTitle
           eyebrow="Our Services"
-          title="Complete Cleaning & Maintenance Solutions"
-          description="From commercial storefronts to residential homes, MBM delivers professional results on your schedule."
+          title="Commercial Cleaning Built for Storefronts"
+          description="Contract window cleaning and exterior maintenance for restaurants, retailers, and multi-location operators across the Twin Cities."
         />
-        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {primaryServices.map((service) => (
+        <div className="mt-14 grid gap-8 md:grid-cols-2">
+          {featuredServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>
-        <div className="mt-12 text-center">
+        <p className="mt-8 text-center text-sm text-muted-foreground">
+          Residential window cleaning is also available.{" "}
+          <Link
+            href="/services#residential-window-cleaning"
+            className="font-medium text-primary hover:text-primary-light"
+          >
+            Learn more
+          </Link>
+        </p>
+        <div className="mt-8 text-center">
           <Button asChild variant="secondary" size="lg">
             <Link href="/services">View All Services</Link>
           </Button>
