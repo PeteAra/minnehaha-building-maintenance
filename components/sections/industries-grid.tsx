@@ -3,12 +3,10 @@ import { IndustryCard } from "@/components/cards/industry-card";
 import { Container } from "@/components/layout/container";
 import { SectionTitle } from "@/components/section-title";
 import { industries } from "@/content/industries";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 export function IndustriesGrid() {
   return (
-    <AnimatedSection className="py-20 lg:py-28">
+    <AnimatedSection id="industries" className="py-20 lg:py-28">
       <Container>
         <SectionTitle
           eyebrow="Who We Serve"
@@ -19,11 +17,6 @@ export function IndustriesGrid() {
           {industries.map((industry) => (
             <IndustryCard key={industry.id} industry={industry} />
           ))}
-        </div>
-        <div className="mt-12 text-center">
-          <Button asChild variant="secondary" size="lg">
-            <Link href="/industries">Explore Industries We Serve</Link>
-          </Button>
         </div>
       </Container>
     </AnimatedSection>

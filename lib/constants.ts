@@ -20,18 +20,17 @@ export const FOUNDED_YEAR = 1978;
 export const BUSINESS_HOURS = "Monday – Friday: 7:00 AM – 5:00 PM";
 
 export const NAV_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/industries", label: "Industries" },
-  { href: "/service-areas", label: "Service Areas" },
-  { href: "/contact", label: "Contact" },
+  { href: "#services", label: "Services" },
+  { href: "#industries", label: "Industries" },
+  { href: "#about", label: "About" },
+  { href: "#areas", label: "Service Areas" },
+  { href: "#contact", label: "Contact" },
 ] as const;
 
 export const FOOTER_SERVICE_LINKS = [
-  { href: "/services#commercial-window-cleaning", label: "Commercial Window Cleaning" },
-  { href: "/services#building-maintenance", label: "Building Maintenance" },
-  { href: "/services#residential-window-cleaning", label: "Residential (Limited)" },
+  { href: "#services", label: "Commercial Window Cleaning" },
+  { href: "#services", label: "Building Maintenance" },
+  { href: "#services", label: "Residential (Limited)" },
 ] as const;
 
 export const LOGO_SRC = "/images/logo.svg";

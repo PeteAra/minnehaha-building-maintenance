@@ -1,6 +1,5 @@
 import { CompanyIntro } from "@/components/sections/company-intro";
 import { ContactSection } from "@/components/sections/contact-section";
-import { CTABanner } from "@/components/sections/cta-banner";
 import { FAQ } from "@/components/sections/faq";
 import { Hero } from "@/components/sections/hero";
 import { IndustriesGrid } from "@/components/sections/industries-grid";
@@ -22,15 +21,14 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <ServicesOverview />
       <IndustriesGrid />
       <WhyChooseUs />
-      <ServicesOverview />
       <StatsBand />
       <CompanyIntro />
       <ServiceAreasPreview />
       <Testimonials />
       <FAQ />
-      <CTABanner />
       <ContactSection />
     </>
   );

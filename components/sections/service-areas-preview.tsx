@@ -1,14 +1,12 @@
 import { AnimatedSection } from "@/components/animated-section";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Container } from "@/components/layout/container";
 import { SectionTitle } from "@/components/section-title";
 import { minneapolisAreas, stPaulAreas } from "@/content/service-areas";
-import Link from "next/link";
 
 export function ServiceAreasPreview() {
   return (
-    <AnimatedSection className="py-20 lg:py-28">
+    <AnimatedSection id="areas" className="py-20 lg:py-28">
       <Container>
         <SectionTitle
           eyebrow="Service Areas"
@@ -38,11 +36,6 @@ export function ServiceAreasPreview() {
               ))}
             </div>
           </div>
-        </div>
-        <div className="mt-10 text-center">
-          <Button asChild size="lg">
-            <Link href="/service-areas">View Full Coverage Map</Link>
-          </Button>
         </div>
       </Container>
     </AnimatedSection>

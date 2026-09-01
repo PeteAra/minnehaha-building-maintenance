@@ -4,7 +4,6 @@ import { Container } from "@/components/layout/container";
 import { FOUNDED_YEAR, PHONE, PHONE_HREF } from "@/lib/constants";
 import { Phone } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 
 export function Hero() {
   return (
@@ -39,7 +38,7 @@ export function Hero() {
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Button asChild size="lg">
-              <Link href="/contact">Request a Commercial Quote</Link>
+              <a href="#contact">Request a Commercial Quote</a>
             </Button>
             <Button asChild size="lg" variant="secondary">
               <a href={PHONE_HREF}>

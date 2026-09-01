@@ -8,7 +8,6 @@ import {
   SITE_NAME,
 } from "@/lib/constants";
 import Image from "next/image";
-import Link from "next/link";
 import { Container } from "./container";
 
 export function Footer() {
@@ -37,13 +36,13 @@ export function Footer() {
             <p className="font-semibold">Quick Links</p>
             <ul className="mt-4 space-y-2">
               {NAV_LINKS.map((link) => (
-                <li key={link.href}>
-                  <Link
+                <li key={link.label}>
+                  <a
                     href={link.href}
                     className="text-sm text-white/70 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark"
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -53,13 +52,13 @@ export function Footer() {
             <p className="font-semibold">Services</p>
             <ul className="mt-4 space-y-2">
               {FOOTER_SERVICE_LINKS.map((link) => (
-                <li key={link.href}>
-                  <Link
+                <li key={link.label}>
+                  <a
                     href={link.href}
                     className="text-sm text-white/70 transition-colors hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary-dark"
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

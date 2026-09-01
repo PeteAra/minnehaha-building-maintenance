@@ -9,7 +9,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import {
-  LOGO_LIGHT_SRC,
   LOGO_SRC,
   NAV_LINKS,
   PHONE,
@@ -20,16 +19,15 @@ import { cn } from "@/lib/utils";
 import { Menu, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Container } from "./container";
 
+const SECTION_IDS = NAV_LINKS.map((link) => link.href.replace("#", ""));
+
 export function Navbar() {
-  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const isHome = pathname === "/";
-  const useLightNav = isHome && !scrolled;
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -39,8 +37,29 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
+    const observers: IntersectionObserver[] = [];
+
+    SECTION_IDS.forEach((id) => {
+      const element = document.getElementById(id);
+      if (!element) return;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActiveSection(id);
+          }
+        },
+        { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+      );
+
+      observer.observe(element);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach((observer) => observer.disconnect());
+  }, []);
+
+  const closeMobile = useCallback(() => setOpen(false), []);
 
   return (
     <header
@@ -61,7 +80,7 @@ export function Navbar() {
             className="relative flex shrink-0 items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
           >
             <Image
-              src={!scrolled && !isHome ? LOGO_LIGHT_SRC : LOGO_SRC}
+              src={LOGO_SRC}
               alt={SITE_SHORT_NAME}
               width={280}
               height={56}
@@ -72,40 +91,29 @@ export function Navbar() {
 
           <ul className="hidden items-center gap-1 lg:flex">
             {NAV_LINKS.map((link) => {
-              const isActive =
-                link.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(link.href);
+              const sectionId = link.href.replace("#", "");
+              const isActive = activeSection === sectionId;
               return (
                 <li key={link.href}>
-                  <Link
+                  <a
                     href={link.href}
                     className={cn(
                       "rounded-lg px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-                      scrolled || useLightNav
-                        ? isActive
-                          ? "text-primary"
-                          : "text-muted-foreground hover:text-primary"
-                        : isActive
-                          ? "text-white"
-                          : "text-white/80 hover:text-white"
+                      isActive
+                        ? "text-primary"
+                        : "text-muted-foreground hover:text-primary"
                     )}
-                    aria-current={isActive ? "page" : undefined}
+                    aria-current={isActive ? "true" : undefined}
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 </li>
               );
             })}
           </ul>
 
           <div className="flex items-center gap-3">
-            <Button
-              asChild
-              size="sm"
-              variant={scrolled || useLightNav ? "default" : "outline"}
-              className="hidden sm:inline-flex"
-            >
+            <Button asChild size="sm" variant="default" className="hidden sm:inline-flex">
               <a href={PHONE_HREF}>
                 <Phone className="size-4" aria-hidden="true" />
                 {PHONE}
@@ -117,11 +125,7 @@ export function Navbar() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className={cn(
-                    "size-14 shrink-0 [&_svg]:!size-9 lg:hidden",
-                    !scrolled && !isHome &&
-                      "text-white hover:bg-white/10 hover:text-white"
-                  )}
+                  className="size-14 shrink-0 [&_svg]:!size-9 lg:hidden"
                   aria-label="Open menu"
                 >
                   <Menu strokeWidth={2.5} />
@@ -133,28 +137,27 @@ export function Navbar() {
                 </SheetHeader>
                 <nav className="mt-6 flex flex-col gap-2" aria-label="Mobile navigation">
                   {NAV_LINKS.map((link) => {
-                    const isActive =
-                      link.href === "/"
-                        ? pathname === "/"
-                        : pathname.startsWith(link.href);
+                    const sectionId = link.href.replace("#", "");
+                    const isActive = activeSection === sectionId;
                     return (
-                      <Link
+                      <a
                         key={link.href}
                         href={link.href}
+                        onClick={closeMobile}
                         className={cn(
                           "rounded-xl px-4 py-3 text-base font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                           isActive
                             ? "bg-primary/10 text-primary"
                             : "text-foreground hover:bg-muted"
                         )}
-                        aria-current={isActive ? "page" : undefined}
+                        aria-current={isActive ? "true" : undefined}
                       >
                         {link.label}
-                      </Link>
+                      </a>
                     );
                   })}
                   <Button asChild className="mt-4">
-                    <a href={PHONE_HREF}>
+                    <a href={PHONE_HREF} onClick={closeMobile}>
                       <Phone className="size-4" aria-hidden="true" />
                       Call {PHONE}
                     </a>

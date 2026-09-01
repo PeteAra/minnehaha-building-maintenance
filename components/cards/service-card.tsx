@@ -1,7 +1,4 @@
-import { Button } from "@/components/ui/button";
 import type { Service } from "@/content/services";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
 
 type ServiceCardProps = {
   service: Service;
@@ -19,12 +16,6 @@ export function ServiceCard({ service }: ServiceCardProps) {
       <p className="mt-3 flex-1 leading-relaxed text-muted-foreground">
         {service.shortDescription}
       </p>
-      <Button asChild variant="ghost" className="mt-6 w-fit px-0 text-primary">
-        <Link href={`/services#${service.id}`}>
-          Learn more
-          <ArrowRight className="size-4" aria-hidden="true" />
-        </Link>
-      </Button>
     </article>
   );
 }

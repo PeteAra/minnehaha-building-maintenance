@@ -18,7 +18,7 @@ export function IndustryCard({ industry }: IndustryCardProps) {
         {industry.description}
       </p>
       <Link
-        href="/contact"
+        href="#contact"
         className="mt-4 inline-flex text-sm font-semibold text-primary transition-colors hover:text-primary-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
       >
         Request service →
