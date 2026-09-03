@@ -11,9 +11,9 @@ import { WhyChooseUs } from "@/components/sections/why-choose-us";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
-  title: "Commercial Window Cleaning for Restaurants, Retail & Malls",
+  title: "Commercial Window Cleaning Minneapolis & St. Paul",
   description:
-    "Minnehaha Building Maintenance Inc. — contract ground-level window cleaning for Twin Cities restaurants, grocery stores, shopping centers, and multi-location businesses since 1978.",
+    "Minnehaha Building Maintenance Inc. — Twin Cities commercial window cleaning for restaurants, grocery stores, shopping centers, and multi-location businesses since 1978. Flexible billing. Call 612-332-1916.",
   path: "/",
 });
 

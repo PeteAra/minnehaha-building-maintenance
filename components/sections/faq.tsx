@@ -6,7 +6,7 @@ import { homeFaqs } from "@/content/faq";
 
 export function FAQ() {
   return (
-    <AnimatedSection className="py-20 lg:py-28">
+    <AnimatedSection id="faq" className="py-20 lg:py-28">
       <Container>
         <div className="mx-auto max-w-3xl">
           <SectionTitle

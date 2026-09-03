@@ -1,8 +1,20 @@
 export const SITE_NAME = "Minnehaha Building Maintenance Inc.";
 export const SITE_SHORT_NAME = "MBM Services";
-export const SITE_URL = "https://www.mbminc-services.com";
+export const SITE_URL = "https://minnehaha-inc.com";
 export const SITE_DESCRIPTION =
-  "Commercial contract window cleaning for Twin Cities restaurants, grocery stores, shopping centers, and multi-location businesses. Ground-level storefront cleaning since 1978.";
+  "Commercial contract window cleaning for Twin Cities restaurants, grocery stores, shopping centers, and multi-location businesses. Ground-level storefront cleaning in Minneapolis and St. Paul since 1978.";
+
+export const SEO_KEYWORDS = [
+  "commercial window cleaning Twin Cities",
+  "restaurant window cleaning Minneapolis",
+  "storefront window cleaning St Paul",
+  "building maintenance Mendota Heights",
+  "contract window cleaning Minnesota",
+  "retail window cleaning",
+  "mall window cleaning",
+  "multi-location window cleaning",
+  "Minnehaha Building Maintenance",
+] as const;
 
 export const PHONE = "612-332-1916";
 export const PHONE_HREF = "tel:+16123321916";

@@ -1,45 +1,7 @@
-import {
-  ADDRESS,
-  FOUNDED_YEAR,
-  PHONE,
-  SITE_NAME,
-  SITE_URL,
-} from "@/lib/constants";
+import { buildJsonLdGraph } from "@/lib/schema";
 
 export function JsonLd() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: SITE_NAME,
-    url: SITE_URL,
-    telephone: `+1-${PHONE.replace(/-/g, "")}`,
-    foundingDate: String(FOUNDED_YEAR),
-    image: `${SITE_URL}/og-image.svg`,
-    priceRange: "$$",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: ADDRESS.street,
-      addressLocality: ADDRESS.city,
-      addressRegion: ADDRESS.state,
-      postalCode: ADDRESS.zip,
-      addressCountry: "US",
-    },
-    areaServed: [
-      {
-        "@type": "City",
-        name: "Minneapolis",
-        containedInPlace: { "@type": "State", name: "Minnesota" },
-      },
-      {
-        "@type": "City",
-        name: "St. Paul",
-        containedInPlace: { "@type": "State", name: "Minnesota" },
-      },
-    ],
-    description:
-      "Commercial contract window cleaning for Twin Cities restaurants, grocery stores, shopping centers, and multi-location businesses since 1978.",
-    sameAs: [],
-  };
+  const schema = buildJsonLdGraph();
 
   return (
     <script
