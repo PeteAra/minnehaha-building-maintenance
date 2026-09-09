@@ -29,7 +29,7 @@ export function Hero() {
             Commercial Contract Cleaning Since {FOUNDED_YEAR}
           </Badge>
           <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight text-primary-dark sm:text-5xl lg:text-6xl">
-            Optimum Appearance Level That Your Customers and Restaurant Deserve
+            Optimum Appearance That Your Retail Customers and Restaurant Establishment Deserve
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
             Trusted Twin Cities vendor for restaurants, grocery stores,
