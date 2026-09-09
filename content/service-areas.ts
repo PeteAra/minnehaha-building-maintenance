@@ -11,6 +11,7 @@ export const minneapolisAreas = [
   "Minnetonka",
   "Eden Prairie",
   "Hopkins",
+  "St. Cloud",
 ] as const;
 
 export const stPaulAreas = [
@@ -26,6 +27,7 @@ export const stPaulAreas = [
   "Stillwater",
   "West St. Paul",
   "South St. Paul",
+  "Hudson, WI",
 ] as const;
 
 export const allServiceAreas = [...minneapolisAreas, ...stPaulAreas];

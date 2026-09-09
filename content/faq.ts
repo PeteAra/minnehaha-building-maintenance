@@ -9,7 +9,7 @@ export const homeFaqs: FAQItem[] = [
     id: "areas",
     question: "What areas do you serve?",
     answer:
-      "We serve the Minneapolis metro area and suburbs, as well as the St. Paul metro area and suburbs throughout the Twin Cities region.",
+      "We serve 200+ communities from Hudson, WI to St. Cloud, MN — including the Twin Cities metro, surrounding suburbs, and rural areas throughout the region. If you're unsure whether we cover your location, give us a call.",
   },
   {
     id: "commercial",

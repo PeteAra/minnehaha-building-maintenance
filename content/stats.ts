@@ -25,9 +25,9 @@ export const companyStats: Stat[] = [
     label: "Insured & Guaranteed Work",
   },
   {
-    id: "metro",
-    value: 2,
-    suffix: "",
-    label: "Metro Areas Covered",
+    id: "communities",
+    value: 200,
+    suffix: "+",
+    label: "Communities Served Across the Region",
   },
 ];
