@@ -24,12 +24,19 @@ const initialFormData: FormData = {
   message: "",
 };
 
-export function ContactForm({ className }: { className?: string }) {
+export function ContactForm({
+  className,
+  accessKey,
+}: {
+  className?: string;
+  accessKey: string;
+}) {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [botcheck, setBotcheck] = useState(false);
 
   const validate = (): FormErrors => {
     const nextErrors: FormErrors = {};
@@ -50,10 +57,16 @@ export function ContactForm({ className }: { className?: string }) {
     setSubmitError(null);
     if (Object.keys(nextErrors).length > 0) return;
 
+    // Honeypot — bots fill this; humans leave it unchecked
+    if (botcheck) {
+      setSubmitted(true);
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      const result = await submitContactForm(formData);
+      const result = await submitContactForm({ ...formData, accessKey });
       if (!result.success) {
         setSubmitError(
           result.message ||
@@ -193,6 +206,17 @@ export function ContactForm({ className }: { className?: string }) {
           </p>
         )}
       </div>
+
+      <input
+        type="checkbox"
+        name="botcheck"
+        className="hidden"
+        tabIndex={-1}
+        autoComplete="off"
+        checked={botcheck}
+        onChange={(e) => setBotcheck(e.target.checked)}
+        aria-hidden="true"
+      />
 
       {submitError && (
         <p className="mt-5 text-sm text-red-600" role="alert">

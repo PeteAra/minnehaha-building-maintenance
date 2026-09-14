@@ -13,6 +13,8 @@ import {
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 
 export function ContactSection() {
+  const accessKey = process.env.WEB3FORMS_ACCESS_KEY ?? "";
+
   return (
     <AnimatedSection id="contact" className="py-20 lg:py-28">
       <Container>
@@ -23,7 +25,7 @@ export function ContactSection() {
         />
         <div className="mt-14 grid gap-12 lg:grid-cols-2">
           <div>
-            <ContactForm />
+            <ContactForm accessKey={accessKey} />
           </div>
           <div className="space-y-8">
             <div className="rounded-2xl border border-border bg-white p-8 shadow-sm">

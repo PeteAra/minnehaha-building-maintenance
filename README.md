@@ -50,10 +50,10 @@ Before going live, collect from the client:
 
 ## Contact Form
 
-Submissions go through [Web3Forms](https://web3forms.com) to `info@minnehahainc.com` via a server API route (the access key stays private).
+Submissions go through [Web3Forms](https://web3forms.com) to `info@minnehahainc.com` from the browser (server-side submits from Vercel are blocked by Web3Forms).
 
 1. Create an access key at https://web3forms.com using `info@minnehahainc.com`
-2. Add to `.env.local` and Vercel → Settings → Environment Variables (Secret):
+2. Add to `.env.local` and Vercel → Settings → Environment Variables:
 
 ```bash
 WEB3FORMS_ACCESS_KEY=your_access_key_here
