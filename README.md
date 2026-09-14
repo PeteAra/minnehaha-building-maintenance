@@ -46,11 +46,20 @@ Before going live, collect from the client:
 5. **Google Maps embed URL** — update `MAP_EMBED_URL` in `lib/constants.ts`
 6. **Professional photography** — replace Unsplash/Wix placeholder images
 7. **Google Search Console** — add verification meta tag to `app/layout.tsx`
-8. **Contact form** — wire up Web3Forms, Formspree, or Resend in `components/contact-form.tsx`
+8. **Contact form** — set `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` (see below)
 
 ## Contact Form
 
-The contact form UI is complete with validation and success states. Submission is currently mocked — see the comment in `components/contact-form.tsx` to integrate your preferred provider.
+Submissions go through [Web3Forms](https://web3forms.com) to `info@minnehahainc.com` via a server API route (the access key stays private).
+
+1. Create an access key at https://web3forms.com using `info@minnehahainc.com`
+2. Add to `.env.local` and Vercel → Settings → Environment Variables (Secret):
+
+```bash
+WEB3FORMS_ACCESS_KEY=your_access_key_here
+```
+
+3. Redeploy so production picks up the key
 
 ## Domain
 

@@ -5,6 +5,7 @@ import { SectionTitle } from "@/components/section-title";
 import {
   ADDRESS,
   BUSINESS_HOURS,
+  CONTACT_EMAIL,
   MAP_EMBED_URL,
   PHONE,
   PHONE_HREF,
@@ -59,10 +60,13 @@ export function ContactSection() {
                 <li className="flex items-start gap-3">
                   <Mail className="mt-0.5 size-5 shrink-0 text-primary" aria-hidden="true" />
                   <div>
-                    <p className="text-sm font-medium text-foreground">Quotes</p>
-                    <p className="text-muted-foreground">
-                      Fast, friendly commercial estimates
-                    </p>
+                    <p className="text-sm font-medium text-foreground">Email</p>
+                    <a
+                      href={`mailto:${CONTACT_EMAIL}`}
+                      className="text-primary hover:text-primary-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    >
+                      {CONTACT_EMAIL}
+                    </a>
                   </div>
                 </li>
               </ul>

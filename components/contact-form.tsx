@@ -29,6 +29,7 @@ export function ContactForm({ className }: { className?: string }) {
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const validate = (): FormErrors => {
     const nextErrors: FormErrors = {};
@@ -46,15 +47,30 @@ export function ContactForm({ className }: { className?: string }) {
     event.preventDefault();
     const nextErrors = validate();
     setErrors(nextErrors);
+    setSubmitError(null);
     if (Object.keys(nextErrors).length > 0) return;
 
     setIsSubmitting(true);
 
-    await submitContactForm(formData);
+    try {
+      const result = await submitContactForm(formData);
+      if (!result.success) {
+        setSubmitError(
+          result.message ||
+            "Something went wrong sending your message. Please try again."
+        );
+        return;
+      }
 
-    setSubmitted(true);
-    setIsSubmitting(false);
-    setFormData(initialFormData);
+      setSubmitted(true);
+      setFormData(initialFormData);
+    } catch {
+      setSubmitError(
+        "Something went wrong sending your message. Please try again or call us."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -177,6 +193,12 @@ export function ContactForm({ className }: { className?: string }) {
           </p>
         )}
       </div>
+
+      {submitError && (
+        <p className="mt-5 text-sm text-red-600" role="alert">
+          {submitError}
+        </p>
+      )}
 
       <Button type="submit" className="mt-6 w-full sm:w-auto" disabled={isSubmitting}>
         {isSubmitting ? "Sending..." : "Send Message"}

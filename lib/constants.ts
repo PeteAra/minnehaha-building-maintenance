@@ -18,6 +18,7 @@ export const SEO_KEYWORDS = [
 
 export const PHONE = "612-332-1916";
 export const PHONE_HREF = "tel:+16123321916";
+export const CONTACT_EMAIL = "info@minnehahainc.com";
 
 export const ADDRESS = {
   street: "1200 Centre Pointe Curve #350",
